@@ -1,0 +1,2 @@
+<%# escape_javascriptはjの本名、jはあだ名 %>
+$("#follow_form_"+"<%= @user.id %>").html("<%= escape_javascript(render partial: 'users/follow_form', locals: { user: @user } ) %>")
