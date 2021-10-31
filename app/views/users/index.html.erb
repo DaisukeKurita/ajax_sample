@@ -1,0 +1,8 @@
+<h2>ユーザー</h2>
+<% @user.each do |user| %>
+  <%= link_to user.name, user_path(user.id) %>
+  <%= user.email %>
+  <%# renderでテンプレートを指定して呼び出し、userインスタンスを渡している？？ %>
+  <%= render 'follow_form', user: user %>
+  <%# <% byebug %>
+<% end %>
